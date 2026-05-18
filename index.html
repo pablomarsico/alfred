@@ -514,7 +514,7 @@
         <h3>Quiero acceso anticipado</h3>
         <p>Sin costo. Sin compromiso. Primeros lugares limitados.</p>
 
-        <form id="signup-form" action="https://formspree.io/f/xeojpwvy" method="POST">
+        <form id="signup-form" action="https://script.google.com/macros/s/AKfycbzQjsT4CyJ2CDP26Std6FnK55w7rpxIEaQProD6EP6umeGusj8gYSUBOoG-0_GJRYmJDQ/exec" method="POST">
           <div class="form-row">
             <input type="text" name="nombre" placeholder="Tu nombre" required />
             <input type="email" name="email" placeholder="Tu email" required />
@@ -665,7 +665,7 @@
         <h3>Reservar mi lugar</h3>
         <p>Solo los primeros anotados participan del diseño del producto.</p>
 
-        <form id="signup-form-2" action="https://formspree.io/f/xeojpwvy" method="POST">
+        <form id="signup-form-2" action="https://script.google.com/macros/s/AKfycbzQjsT4CyJ2CDP26Std6FnK55w7rpxIEaQProD6EP6umeGusj8gYSUBOoG-0_GJRYmJDQ/exec" method="POST">
           <div class="form-row">
             <input type="text" name="nombre" placeholder="Tu nombre" required />
             <input type="email" name="email" placeholder="Tu email" required />
@@ -708,20 +708,22 @@
         btn.textContent = 'Enviando...';
         btn.disabled = true;
 
+        const data = {
+          nombre:        form.querySelector('[name="nombre"]').value,
+          email:         form.querySelector('[name="email"]').value,
+          obras_activas: form.querySelector('[name="obras_activas"]').value
+        };
+
         try {
-          const res = await fetch(form.action, {
+          await fetch(form.action, {
             method: 'POST',
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
           });
 
-          if (res.ok) {
-            form.style.display = 'none';
-            document.getElementById(successId).style.display = 'block';
-          } else {
-            btn.textContent = 'Error — intentá de nuevo';
-            btn.disabled = false;
-          }
+          form.style.display = 'none';
+          document.getElementById(successId).style.display = 'block';
         } catch {
           btn.textContent = 'Error — intentá de nuevo';
           btn.disabled = false;
