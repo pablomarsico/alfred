@@ -8,7 +8,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="alfred-bg-desktop.jpg" as="image" media="(min-width: 769px)" />
+  <link rel="preload" href="alfred-bg-mobile.jpg" as="image" media="(max-width: 768px)" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -82,7 +85,7 @@
       text-align: center;
       position: relative;
       overflow: hidden;
-      background-image: url('alfred-hover.webp');
+      background-image: url('alfred-bg-desktop.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -495,6 +498,7 @@
       section { padding: 72px 24px; }
       .hero {
         padding: 100px 24px 60px;
+        background-image: url('alfred-bg-mobile.jpg');
         background-attachment: scroll;
         background-position: center center;
       }
