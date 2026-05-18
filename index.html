@@ -266,18 +266,37 @@
 
     .pain-item {
       display: flex;
-      align-items: flex-start;
-      gap: 14px;
+      align-items: center;
+      gap: 16px;
       padding: 18px 20px;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 10px;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+      cursor: default;
+    }
+
+    .pain-item:hover {
+      transform: translateX(8px);
+      border-color: var(--gold);
     }
 
     .pain-icon {
-      font-size: 22px;
+      width: 44px;
+      height: 44px;
       flex-shrink: 0;
-      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(201,168,76,0.1);
+      border-radius: 10px;
+      color: var(--gold);
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .pain-item:hover .pain-icon {
+      transform: scale(1.15);
+      background: rgba(201,168,76,0.2);
     }
 
     .pain-item p {
@@ -346,8 +365,21 @@
     }
 
     .feature-icon {
-      font-size: 32px;
-      margin-bottom: 20px;
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(201,168,76,0.1);
+      border-radius: 12px;
+      color: var(--gold);
+      margin-bottom: 24px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .feature-card:hover .feature-icon {
+      transform: scale(1.12) rotate(-6deg);
+      background: rgba(201,168,76,0.2);
     }
 
     .feature-card h3 {
@@ -389,9 +421,29 @@
       border-radius: 10px;
       font-size: 16px;
       color: var(--text);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+      cursor: default;
     }
 
-    .audience-list li span { font-size: 22px; }
+    .audience-list li:hover {
+      transform: translateX(6px);
+      border-color: var(--gold);
+    }
+
+    .audience-icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      flex-shrink: 0;
+      transition: transform 0.25s ease;
+    }
+
+    .audience-list li:hover .audience-icon {
+      transform: scale(1.2);
+    }
 
     /* ── CTA FINAL ── */
     .cta-final {
@@ -500,19 +552,27 @@
         </div>
         <div class="problema-pains">
           <div class="pain-item">
-            <div class="pain-icon">📱</div>
+            <div class="pain-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
             <p>40 conversaciones de WhatsApp para saber si una obra está al día</p>
           </div>
           <div class="pain-item">
-            <div class="pain-icon">📊</div>
+            <div class="pain-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
+            </div>
             <p>Hojas de cálculo desactualizadas que nadie mira</p>
           </div>
           <div class="pain-item">
-            <div class="pain-icon">⏰</div>
+            <div class="pain-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
             <p>Plazos que se corren sin que te avisen a tiempo</p>
           </div>
           <div class="pain-item">
-            <div class="pain-icon">😤</div>
+            <div class="pain-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
             <p>Clientes que piden informes y tardás horas en armarlos</p>
           </div>
         </div>
@@ -543,17 +603,23 @@
       <h2 class="section-title">Tres cosas que hoy te llevan horas,<br>Alfred las hace solo.</h2>
       <div class="features-grid">
         <div class="feature-card">
-          <div class="feature-icon">🌅</div>
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </div>
           <h3>Briefing diario automático</h3>
           <p>Cada mañana recibís un resumen de todas tus obras: avances, alertas y pendientes. Sin tener que preguntar nada.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">⚠️</div>
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
           <h3>Alertas de riesgo antes de que sea tarde</h3>
           <p>Detecta cuando un plazo no va a cumplirse, un presupuesto se está estirando o un proveedor está fallando. Te avisa antes de que el cliente lo note.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">📄</div>
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
           <h3>Informes de obra en un clic</h3>
           <p>Generá actualizaciones para clientes en segundos. Profesionales, claras y sin volver a escribir lo mismo de siempre.</p>
         </div>
@@ -571,9 +637,18 @@
           <p style="color:#888; font-size:16px; line-height:1.8; margin-top:16px;">No para grandes corporaciones con equipos de tecnología. Para los que gestionan obras con un equipo chico, muchas responsabilidades y poco tiempo.</p>
         </div>
         <ul class="audience-list">
-          <li><span>🏗️</span> Constructoras de 3 a 50 empleados</li>
-          <li><span>📐</span> Estudios de arquitectura con proyectos simultáneos</li>
-          <li><span>🏢</span> Desarrolladoras con múltiples obras en curso</li>
+          <li>
+            <span class="audience-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z"/><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M4 15v-3a8 8 0 0 1 16 0v3"/></svg></span>
+            Constructoras de 3 a 50 empleados
+          </li>
+          <li>
+            <span class="audience-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span>
+            Estudios de arquitectura con proyectos simultáneos
+          </li>
+          <li>
+            <span class="audience-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><line x1="8" y1="6" x2="8" y2="6"/><line x1="12" y1="6" x2="12" y2="6"/><line x1="16" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8" y2="10"/><line x1="12" y1="10" x2="12" y2="10"/><line x1="16" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="8" y2="14"/><line x1="12" y1="14" x2="12" y2="14"/><line x1="16" y1="14" x2="16" y2="14"/></svg></span>
+            Desarrolladoras con múltiples obras en curso
+          </li>
         </ul>
       </div>
     </div>
