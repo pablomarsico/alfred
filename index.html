@@ -316,6 +316,24 @@
     }
 
     /* ── SOLUCIÓN ── */
+    .solucion {
+      background-image: url('alfred-bg-desktop.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    .solucion::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10,10,10,0.78);
+      pointer-events: none;
+    }
+
+    .solucion .container { position: relative; }
+
     .solucion-intro {
       max-width: 640px;
     }
@@ -501,6 +519,10 @@
         background-image: url('alfred-bg-mobile.jpg');
         background-attachment: scroll;
         background-position: center center;
+      }
+      .solucion {
+        background-image: url('alfred-bg-mobile.jpg');
+        background-attachment: scroll;
       }
       .form-card { padding: 28px 24px; }
       .problema-grid,
