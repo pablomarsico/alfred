@@ -24,8 +24,8 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="alfred-bg-desktop.jpg" as="image" media="(min-width: 769px)" />
-  <link rel="preload" href="alfred-bg-mobile.jpg" as="image" media="(max-width: 768px)" />
+  <link rel="preload" href="alfred-bg-desktop.webp" as="image" media="(min-width: 769px)" />
+  <link rel="preload" href="alfred-bg-mobile.webp" as="image" media="(max-width: 768px)" />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" /></noscript>
 
@@ -135,7 +135,7 @@
       text-align: center;
       position: relative;
       overflow: hidden;
-      background-image: url('alfred-bg-desktop.jpg');
+      background-image: url('alfred-bg-desktop.webp');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -368,7 +368,7 @@
 
     /* ── SOLUCIÓN ── */
     .solucion {
-      background-image: url('alfred-solucion.jpg');
+      background-image: url('alfred-solucion.webp');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -527,7 +527,7 @@
 
     /* ── CTA FINAL ── */
     .cta-final {
-      background-image: url('alfred-footer-bg.jpg');
+      background-image: url('alfred-footer-bg.webp');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -649,7 +649,7 @@
   <!-- HERO -->
   <section class="hero" id="inicio">
     <div class="mobile-bg" aria-hidden="true">
-      <img src="alfred-bg-mobile.jpg" alt="" />
+      <img src="alfred-bg-mobile.webp" alt="" fetchpriority="high" />
     </div>
     <div class="mobile-overlay" aria-hidden="true"></div>
     <div class="hero-inner">
@@ -730,7 +730,7 @@
   <!-- SOLUCIÓN -->
   <section class="solucion" id="solucion">
     <div class="mobile-bg" aria-hidden="true">
-      <img src="alfred-solucion-mobile.jpg" alt="" />
+      <img src="alfred-solucion-mobile.webp" alt="" loading="lazy" />
     </div>
     <div class="mobile-overlay" aria-hidden="true"></div>
     <div class="container">
@@ -808,7 +808,7 @@
   <!-- CTA FINAL -->
   <section class="cta-final" id="acceso">
     <div class="mobile-bg footer-bg" aria-hidden="true">
-      <img src="alfred-footer-mobile.jpg" alt="" />
+      <img src="alfred-footer-mobile.webp" alt="" loading="lazy" />
     </div>
     <div class="mobile-overlay" aria-hidden="true"></div>
     <div class="container">
