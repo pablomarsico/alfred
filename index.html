@@ -47,11 +47,6 @@
     }
 
     /* ── BACKGROUND IMAGE ── */
-    .hero-group {
-      position: relative;
-      overflow: hidden;
-    }
-
     .section-bg {
       position: absolute;
       inset: 0;
@@ -112,6 +107,7 @@
       padding: 120px 40px 80px;
       text-align: center;
       position: relative;
+      overflow: hidden;
     }
 
     .hero::before {
@@ -342,6 +338,7 @@
     /* ── SOLUCIÓN ── */
     .solucion {
       position: relative;
+      overflow: hidden;
     }
 
     .solucion::before {
@@ -596,15 +593,12 @@
     <a class="nav-cta" href="#acceso">Quiero acceso</a>
   </nav>
 
-  <!-- HERO + SOLUCIÓN comparten el mismo fondo -->
-  <div class="hero-group">
+  <!-- HERO -->
+  <section class="hero" id="inicio">
     <picture class="section-bg">
       <source srcset="alfred-bg-mobile.jpg" media="(max-width: 768px)" />
       <img src="alfred-bg-desktop.jpg" alt="" loading="eager" fetchpriority="high" />
     </picture>
-
-  <!-- HERO -->
-  <section class="hero" id="inicio">
     <div class="hero-inner">
       <div class="hero-badge">Acceso anticipado · LatAm</div>
       <h1>Sabé exactamente en qué está <span>cada obra</span>, sin revisar 40 chats de WhatsApp.</h1>
@@ -682,6 +676,10 @@
 
   <!-- SOLUCIÓN -->
   <section class="solucion" id="solucion">
+    <picture class="section-bg">
+      <source srcset="alfred-bg-mobile.jpg" media="(max-width: 768px)" />
+      <img src="alfred-bg-desktop.jpg" alt="" loading="lazy" />
+    </picture>
     <div class="container">
       <div class="solucion-intro">
         <p class="section-label">La solución</p>
@@ -695,7 +693,6 @@
       </div>
     </div>
   </section>
-  </div><!-- /hero-group -->
 
   <!-- FEATURES -->
   <section class="features" id="features">
