@@ -13,6 +13,15 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BXQ9W9N0TJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BXQ9W9N0TJ');
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="alfred-bg-desktop.jpg" as="image" media="(min-width: 769px)" />
@@ -875,6 +884,13 @@
 
           form.style.display = 'none';
           document.getElementById(successId).style.display = 'block';
+
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'generate_lead', {
+              form_id: formId,
+              obras_activas: data.obras_activas
+            });
+          }
         } catch {
           btn.textContent = 'Error — intentá de nuevo';
           btn.disabled = false;
