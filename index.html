@@ -71,6 +71,15 @@
       object-position: top center;
     }
 
+    .mobile-overlay {
+      display: none;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 1;
+      background: rgba(8,8,8,0.62);
+      pointer-events: none;
+    }
+
     /* ── NAV ── */
     nav {
       position: fixed;
@@ -596,6 +605,7 @@
       nav { padding: 16px 24px; }
       section { padding: 72px 24px; }
       .mobile-bg { display: block; }
+      .mobile-overlay { display: block; }
       .hero {
         padding: 100px 24px 60px;
         background-image: none;
@@ -632,6 +642,7 @@
     <div class="mobile-bg" aria-hidden="true">
       <img src="alfred-bg-mobile.jpg" alt="" />
     </div>
+    <div class="mobile-overlay" aria-hidden="true"></div>
     <div class="hero-inner">
       <div class="hero-badge">Acceso anticipado · LatAm</div>
       <h1>Sabé exactamente en qué está <span>cada obra</span>, sin revisar 40 chats de WhatsApp.</h1>
@@ -712,6 +723,7 @@
     <div class="mobile-bg" aria-hidden="true">
       <img src="alfred-solucion-mobile.jpg" alt="" />
     </div>
+    <div class="mobile-overlay" aria-hidden="true"></div>
     <div class="container">
       <div class="solucion-intro">
         <p class="section-label">La solución</p>
@@ -789,6 +801,7 @@
     <div class="mobile-bg footer-bg" aria-hidden="true">
       <img src="alfred-footer-mobile.jpg" alt="" />
     </div>
+    <div class="mobile-overlay" aria-hidden="true"></div>
     <div class="container">
       <p class="section-label">Acceso anticipado</p>
       <h2 class="section-title">Estamos construyendo Alfred junto a los primeros usuarios de LatAm.</h2>
