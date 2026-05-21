@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alfred - Tu aliado estratégico en la gestión de obras</title>
-  <meta name="description" content="Alfred centraliza todo lo que pasa en tus obras, detecta problemas antes de que exploten y te entrega cada mañana un resumen claro — sin revisar decenas de chats." />
-  <meta property="og:title" content="Alfred - Tu aliado estratégico en la gestión de obras" />
-  <meta property="og:description" content="Alfred hace el trabajo de seguimiento por vos. Centraliza tus proyectos, detecta riesgos a tiempo y te entrega cada mañana un resumen claro." />
+  <title>Alfred - El asistente del dueño de obra, no del equipo</title>
+  <meta name="description" content="Alfred no es un sistema de gestión. Lee tus datos actuales — Excel, WhatsApp, PDF — y cada mañana te dice qué necesita tu atención." />
+  <meta property="og:title" content="Alfred - El asistente del dueño de obra, no del equipo" />
+  <meta property="og:description" content="Alfred no es un software que tu equipo tiene que aprender. Funciona con lo que ya tenés y cada mañana te dice qué necesita tu atención." />
   <meta property="og:image" content="https://alfred-virid.vercel.app/alfred-bg-desktop.jpg" />
   <meta property="og:url" content="https://alfred-virid.vercel.app" />
   <meta property="og:type" content="website" />
@@ -476,6 +476,57 @@
       line-height: 1.7;
     }
 
+    /* ── HERRAMIENTAS CALLOUT ── */
+    .herramientas-callout {
+      margin-top: 48px;
+      padding: 24px 28px;
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      background: rgba(255,208,77,0.05);
+    }
+
+    .herramientas-callout strong {
+      display: block;
+      font-size: 18px;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .herramientas-callout p {
+      font-size: 15px;
+      color: #999;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* ── NO ES ALFRED ── */
+    .no-es-alfred {
+      margin-top: 48px;
+      padding: 24px 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 10px;
+    }
+
+    .no-es-alfred .no-es-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .no-es-alfred p {
+      font-size: 15px;
+      color: #888;
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+
+    .no-es-alfred p:last-child { margin-bottom: 0; }
+
     /* ── PARA QUIÉN ── */
     .paraquien-grid {
       display: grid;
@@ -654,8 +705,8 @@
     <div class="mobile-overlay" aria-hidden="true"></div>
     <div class="hero-inner">
       <div class="hero-badge">Acceso anticipado · LatAm</div>
-      <h1>Visibilidad total de <span>cada proyecto</span> para tomar decisiones sin demoras.</h1>
-      <p>Alfred hace el trabajo de seguimiento por vos. Centraliza tus proyectos, detecta riesgos a tiempo y te entrega cada mañana un resumen claro.</p>
+      <h1>El asistente del dueño.<br><span>No del equipo de obra.</span></h1>
+      <p>No es un software que tu equipo tiene que aprender. Funciona con lo que ya tenés — Excel, WhatsApp, PDF — y cada mañana te dice qué necesita tu atención.</p>
 
       <div class="form-card">
         <h3>Quiero acceso anticipado</h3>
@@ -695,7 +746,7 @@
           <p class="section-label">El problema</p>
           <h2 class="section-title">Dirigir obras en LatAm es vivir apagando incendios.</h2>
           <p>Presupuestos que se desactualizan. Proveedores que no contestan. Clientes que piden informes. Plazos que se corren sin que nadie lo diga a tiempo.</p>
-          <p>Y vos en el medio, cruzando planillas, correos y sistemas de gestión para armar un estado de situación que nadie te da junto.</p>
+          <p>Y vos en el medio, cruzando planillas, correos y aplicaciones para armar un estado de situación que nadie te da junto. Tal vez ya probaste algún software de gestión. El problema: funciona solo si todo el equipo lo carga — y eso nunca termina de pasar.</p>
         </div>
         <div class="problema-pains">
           <div class="pain-item">
@@ -724,6 +775,10 @@
           </div>
         </div>
       </div>
+      <div class="herramientas-callout">
+        <strong>Ya tenés herramientas. El problema es que no te hablan.</strong>
+        <p>Los sistemas de gestión de obras están pensados para el equipo. Alfred está pensado para el dueño.</p>
+      </div>
     </div>
   </section>
 
@@ -743,6 +798,7 @@
           <li>Qué necesita tu decisión</li>
           <li>Qué puede esperar</li>
         </ul>
+        <p style="margin-top: 28px; font-size: 15px; color: #666; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px;">Funciona con lo que ya tenés: Excel, WhatsApp, PDF. Sin migrar datos. Sin que tu equipo cambie cómo trabaja.</p>
       </div>
     </div>
   </section>
@@ -758,21 +814,21 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           </div>
           <h3>Briefing diario automático</h3>
-          <p>Cada mañana recibís un resumen de todas tus obras: avances, alertas y pendientes. Sin tener que preguntar nada.</p>
+          <p>Cada mañana sabés el estado real de todas tus obras: avances, alertas y pendientes. Sin abrir ninguna app. Sin que nadie tenga que cargar datos primero.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           </div>
           <h3>Alertas de riesgo antes de que sea tarde</h3>
-          <p>Detecta cuando un plazo no va a cumplirse, un presupuesto se está estirando o un proveedor está fallando. Te avisa antes de que el cliente lo note.</p>
+          <p>Detecta desvíos de plazo y presupuesto antes de que ocurran — no cuando ya es tarde. Te avisa a vos directamente, sin esperar que alguien lo reporte.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           </div>
-          <h3>Informes de obra en un clic</h3>
-          <p>Generá actualizaciones para clientes en segundos. Profesionales, claras y sin volver a escribir lo mismo de siempre.</p>
+          <h3>Consultás como hablás</h3>
+          <p>Preguntá por cualquier obra como si le hablaras a un colega. Sin navegar módulos. Sin recordar en qué planilla está cada dato.</p>
         </div>
       </div>
     </div>
@@ -802,6 +858,11 @@
           </li>
         </ul>
       </div>
+      <div class="no-es-alfred">
+        <p class="no-es-label">Para quién NO es Alfred</p>
+        <p>Si tu equipo ya usa un sistema de gestión y lo tienen incorporado, Alfred probablemente sea redundante.</p>
+        <p>Alfred es para el dueño que tiene la información dispersa en diez lugares distintos y necesita alguien que la conecte.</p>
+      </div>
     </div>
   </section>
 
@@ -814,7 +875,7 @@
     <div class="container">
       <p class="section-label">Acceso anticipado</p>
       <h2 class="section-title">Estamos construyendo Alfred junto a los primeros usuarios de LatAm.</h2>
-      <p class="subtitle">Si dirigís obras y querés ser parte, anotate ahora. Sin costo. Sin compromiso.</p>
+      <p class="subtitle">Sin demo de 45 minutos. Sin onboarding. Dejá tu email y te mostramos cómo funciona con tus obras actuales.</p>
 
       <div class="form-card" style="margin: 0 auto;">
         <h3>Reservar mi lugar</h3>
